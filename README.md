@@ -13,7 +13,7 @@ After you **clone this repo down** to a local directory inside your mks folder t
 
 ## Compile
 
-Then you can start up your sass compiler with **my/path** [ `bundle exec sass --watch -l ./scss/foundation.scss:.css/style.css` ].
+Then you can start up your sass compiler with **my/path** [ `bundle exec sass --watch -l ./scss/foundation.scss:./css/style.css` ].
 
 
 ## Add your own CSS
