@@ -1,4 +1,4 @@
-# Foundation scss Starter
+# Sinatra + Foundation scss Starter
 
 
 A repo to start using foundation with SASS/SCSS for the students at MKS. It includes a basic html file `index.html` where you can design your page.  It also includes the `js` needed to use all the Foundation js components at the bottom of the DOM. Feel free to play around with all of those, as well.
@@ -13,7 +13,7 @@ After you **clone this repo down** to a local directory inside your mks folder t
 
 ## Compile
 
-Then you can start up your sass compiler with **my/path** [ `bundle exec sass --watch -l ./scss/foundation.scss:.css/style.css` ].
+Then you can start up your sass compiler with **my/path** [ `bundle exec sass --watch -l ./public/scss/foundation.scss:./public/css/style.css` ].
 
 
 ## Add your own CSS
@@ -71,3 +71,8 @@ If you want to customize the color of that, you can go to <a href="http://founda
 # YAGNI
 
 Do not hesitate at all to **start by commenting out most of the @imported files** in `foundation.scss`.  If you're not going to use it then why produce all that css to start.  As you build out a site with Foundation and get used to it, **comment in only the components that you do need**.
+
+
+# THINGS YOU SHOULD DO:
+
+* Don't write more than one `<DOCTYPE>` and `<head>` outside of your main layout.erb file unless you are using 

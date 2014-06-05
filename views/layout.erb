@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>My Project | CHANGE ME CHANGE ME CHANGE ME</title>
+
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+    </head>
+
+    <body>
+        <%= erb :_header %>
+        <div class="row">
+            <div class="large-3 columns">
+              I'm a classic Sidebar
+            </div>
+            <div class="large-6 columns">
+                Your erb file you reference in your Sinatra
+                routes will show up here
+                <%= yield %>
+            </div>
+            <div class="large-3 columns">
+              Hey Revenue rocks! 
+              <br />
+              Maybe put some ads here
+            </div>
+        </div>
+        <%= erb :_footer %>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/foundation.min.js"></script>
+        <script type="text/javascript" src="application.js"></script>
+    </body>
+
+</html>
