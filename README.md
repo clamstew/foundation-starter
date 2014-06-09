@@ -32,6 +32,26 @@ So if you are working on your **header** and making your own, you might make a n
   "header"; // <--- this is my new file
 ```
 
+## Add your own variables file
+
+Since a variable file, such as `myvars.sass`, needs to be included higher up on the inheritance chain, make sure to put it first, even before you import the foundation settings. Then all files will have access to your own save variables.
+
+```scss
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import 'myvars' // <--- your varialbes file needs to go first
+
+@import 'foundation/settings';
+
+// Behold, here are all the Foundation components.
+@import
+  "foundation/components/grid",
+  "foundation/components/accordion",
+  "foundation/components/alert-boxes",
+  "foundation/components/block-grid",
+  // ...
+```
 
 ----
 
@@ -66,6 +86,12 @@ Foundation includes that classic somewhat ubiquitous topbar that you see across 
 
 If you want to customize the color of that, you can go to <a href="http://foundation.zurb.com/docs/components/topbar.html" target="_blank">Topbar</a>.  Again at the bottom look for your variables and find `$topbar-bg: #111;`.  You would then search in `_settings.scss` for `$topbar-bg` and you can add any background propertiest to it from colors to gradients to even a background image.
 
+
+#### WARNING about uncommenting lines in _settings.scss
+
+If you uncomment in a file that is one of their variables by default, either **1) make sure you have declared your own override `$variable` value set in your `myvar.sass`**, which you would put (per the directions above), OR **2) make sure you change that variable to a hard value**.
+
+<span style="color: red;">Otherwise, if you are going to leave it set to their default variable, don't uncomment that line in settings.  It WILL throw an error.</span>
 
 
 # YAGNI
