@@ -6,30 +6,32 @@
         <title>My Project | CHANGE ME CHANGE ME CHANGE ME</title>
 
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
-        <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
     </head>
 
     <body>
         <%= erb :_header %>
         <div class="row">
-            <div class="large-3 columns">
-              I'm a classic Sidebar
-            </div>
-            <div class="large-6 columns">
+            <%= erb :_sidebar %>
+            <div class="large-6 columns panel">
                 Your erb file you reference in your Sinatra
                 routes will show up here
+                <br />
+                <br />
                 <%= yield %>
             </div>
-            <div class="large-3 columns">
+            <div class="large-3 columns panel">
               Hey Revenue rocks! 
               <br />
               Maybe put some ads here
             </div>
         </div>
         <%= erb :_footer %>
-        <script type="text/javascript" src="/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/js/foundation.min.js"></script>
-        <script type="text/javascript" src="application.js"></script>
+        <script type="text/javascript" src="/js/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/vendor/foundation.min.js"></script>
+        <script type="text/javascript" src="/js/vendor/underscore.js"></script>
+        <script type="text/javascript" src="/js/controllers/business-logic.js"></script>
+        <script type="text/javascript" src="/js/presenters/presentation-ui.js"></script>
+
     </body>
 
 </html>
