@@ -1,0 +1,40 @@
+-
+  id: 1
+  joke: Why is it that programmers always confuse Halloween with Christmas?
+  answer: Because 31 OCT = 25 DEC.
+-
+  id: 2
+  joke: What is JavaScript's favorite Indian food?
+  answer: NaN
+-
+  id: 3
+  joke: Whats the object-oriented way to become wealthy?
+  answer: Inheritance
+-
+  id: 4
+  joke: Why are Ruby programmers always single?
+  answer: Because they always treat people like objects
+-
+  id: 5
+  joke: Why are Assembly programmers always soaking wet?
+  answer: They work below C-level
+-
+  id: 6
+  joke: Whats HTMLs favorite meal of the day?
+  answer: '<br/>fast'
+-
+  id: 7
+  joke: Why did the programmer quit his job?
+  answer: Because he didn't get arrays.
+-
+  id: 8
+  joke: Why do java programmers have to wear glasses?
+  answer: Because they don't see sharp.
+-
+  id: 9
+  joke: How many programmers does it take to kill a cockroach?
+  answer: 'Two: one holds, the other installs Windows on it.'
+-
+  id: 10
+  joke: Have you heard the one about an SQL query walking into a bar?
+  answer: "It walked up to two tables and asked, 'Can I join you?'"
