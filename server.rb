@@ -41,11 +41,16 @@ end
 
 post '/api/jokes/create' do
   original_jokes_length = @@jokes.count
-  @@jokes.push(params[:joke])
-  if @@jokes.count == original_jokes_length + 1
-    response = true
-  else
+  if params[:joke]['joke'].empty? || params[:joke]['answer'].empty?
     response = false
+    json response
+  else
+    @@jokes.push(params[:joke])
+    if @@jokes.count == original_jokes_length + 1
+      response = true
+    else
+      response = false
+    end
+    json response
   end
-  json response
 end
