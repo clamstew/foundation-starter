@@ -36,11 +36,8 @@
         , answer = $("#new-joke-answer-input").val()
         , newId = jokes.length + 1
       ;
-      console.log("what is joke -> ", joke);
-      console.log("what is answer -> ", answer);
-      console.log("what is the new id -> ", newId);
-
       // add it locally to jokes
+      // this will also attempt to save it up to the server
       bl.addJokeToLocalJokes(newId, joke, answer);
     });
 
