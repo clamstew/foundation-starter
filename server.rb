@@ -1,12 +1,20 @@
 # required gem includes
 require 'sinatra'
-require "sinatra/json"
+require 'sinatra/json'
+require 'pry'
 
 # require file includes
 require_relative 'lib/myapp.rb'
 
 set :bind, '0.0.0.0' # Vagrant fix
 set :port, 9494
+
+# define this iVar outside routes so can pass around
+# @jokes
+configure do
+  jokesKlass = MyApp::Jokes.new
+  @@jokes = jokesKlass.jokes
+end
 
 get '/' do
   # This goes in your <%= yield %> statement
@@ -28,11 +36,16 @@ end
 
 # more info sinatra json: http://www.sinatrarb.com/contrib/json.html
 get '/api/jokes' do
-  jokesKlass = MyApp::Jokes.new
-  @jokes = jokesKlass.jokes
-  json @jokes
+  json @@jokes
 end
 
 post '/api/jokes/create' do
-
+  original_jokes_length = @@jokes.count
+  @@jokes.push(params[:joke])
+  if @@jokes.count == original_jokes_length + 1
+    response = true
+  else
+    response = false
+  end
+  json response
 end
