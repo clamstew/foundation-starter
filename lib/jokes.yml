@@ -21,7 +21,7 @@
 -
   id: 6
   joke: Whats HTMLs favorite meal of the day?
-  answer: '<br/>fast'
+  answer: "&lt;br/&gt;fast"
 -
   id: 7
   joke: Why did the programmer quit his job?
@@ -38,3 +38,63 @@
   id: 10
   joke: Have you heard the one about an SQL query walking into a bar?
   answer: "It walked up to two tables and asked, 'Can I join you?'"
+-
+  id: 11
+  joke: "A neutron walks into a bar and says, 'I'd like a beer. How much will that be?'"
+  answer: "The bartender responds, 'For you? No charge!'"
+-
+  id: 12
+  joke: What do you call a fish with no eye?
+  answer: A fsh
+-
+  id: 13
+  joke: How many programmers does it take to change a light bulb?
+  answer: None! It's a hardware problem
+-
+  id: 14
+  joke: 'A group of ten top software engineers is sent to a class for aspiring managers. The teacher walks in and asks this question:\n"You work for a software company which develops avionics (software that controls the instruments of an airplane). One day you are taking a business trip. As you get on the plane you see a plaque that says this plane is using a beta of the software your team developed. Who would get off?"\nNine developers raised their hands. The teacher looked at the tenth and asked, "Why would you stay on?"'
+  answer: 'The tenth said, "if my team wrote the software, the plane would not get off the ground, much less crash."'
+-
+  id: 15
+  joke: 'A programmer’s wife sends him to the grocery store with the instructions, "get a loaf of bread, and if they have eggs, get a dozen."'
+  answer: 'He comes home with a dozen loaf of bread and tells her, "they had eggs."'
+-
+  id: 16
+  joke: What is the most used language in programming?
+  answer: Profanity
+-
+  id: 17
+  joke: I started a band called 1023 Megabytes
+  answer: we haven't had any gigs yet....
+-
+  id: 18
+  joke: What's the object-oriented way to get rich?
+  answer: Inhertitance!!!
+-
+  id: 19
+  joke: Why did the function get away with murder?
+  answer: Because it was anonymous
+-
+  id: 20
+  joke: How do you comfort a JavaScript bug?
+  answer: You console it
+-
+  id: 21
+  joke: What is the coldest HTML tag?
+  answer: '&lt;br/&gt;'
+-
+  id: 22
+  joke: How many Prolog programmers does it take to screw in a lightbulb?
+  answer: No
+-
+  id: 23
+  joke: 'What the programmer say when the weekend was coming?'
+  answer: '&91;"hip", "hip"&93;'
+-
+  id: 24
+  joke: Which rapper is the best programmer?
+  answer: Method Man!!!
+-
+  id: 25
+  joke: 'The Programmer exclaimed, "I eat URLs for breakfast!" Someone a few cubicles over fired back, "How many?"'
+  answer: 200 OK!
