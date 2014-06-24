@@ -31,16 +31,23 @@
     };
 
     this.addJokeToLocalJokes = function(id, joke, answer) {
-      var newJokeObj = {
-        id: id,
-        joke: joke,
-        answer: answer
-      };
-      console.log("what is the new joke object", newJokeObj);
       // add the new joke to window.jokes
-      jokes.push(newJokeObj);
-      // now that it's local lets try adding it to the server
-      bl.addJokeToServerJokes(newJokeObj);
+      // if the user provides a joke and an answer
+      if (joke && answer) {
+        var newJokeObj = {
+          id: id,
+          joke: joke,
+          answer: answer
+        };
+        console.log("what is the new joke object", newJokeObj);
+        jokes.push(newJokeObj);
+        // now that it's local lets try adding it to the server
+        bl.addJokeToServerJokes(newJokeObj);
+      // if both joke and answer aren't provided prompt the user
+      // on the client to try again
+      } else {
+        $('#joke-submit-form-response').text('Make sure you entered both a joke and an answer.');
+      }
     };
     this.addJokeToServerJokes = function(newJokeObj) {
       $.ajax({
@@ -57,7 +64,7 @@
             $("#new-joke-input").val('');
             $("#new-joke-answer-input").val('');
           } else {
-            $('#joke-submit-form-response').text('There was an issue adding your joke.  Please try again.');
+            $('#joke-submit-form-response').text('There was an issue adding your joke.  Please try again.  Check to see you put in a joke');
           }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown)  {
@@ -68,6 +75,8 @@
         }
       });
     };
+    // we can use this function to store local variables to your browser
+    // so the jokes don't repeat until you have seen them all
     this.storeLocalToldJokes = function() {};
   };
 
