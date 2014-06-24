@@ -39,27 +39,32 @@
       console.log("what is the new joke object", newJokeObj);
       // add the new joke to window.jokes
       jokes.push(newJokeObj);
-      bl.addJokeToServerJokes(newJokeObj)
+      // now that it's local lets try adding it to the server
+      bl.addJokeToServerJokes(newJokeObj);
     };
     this.addJokeToServerJokes = function(newJokeObj) {
       $.ajax({
         type: 'POST',
         url: '/api/jokes/create',
-        data: newJokeObj,
+        data: {'joke': newJokeObj},
         dataType: 'json',
         cache: false,
         timeout: 7000, // seven seconds
         success: function(data)  {
-          console.log("what data came back from server -> ", code);
+          console.log("what data came back from server -> ", data);
+          if (data) {
+            $('#joke-submit-form-response').text('Joke was successfully added to server memory!');
+            $("#new-joke-input").val('');
+            $("#new-joke-answer-input").val('');
+          } else {
+            $('#joke-submit-form-response').text('There was an issue adding your joke.  Please try again.');
+          }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown)  {
-          $('form #response').removeClass().addClass('error')
+          $('#joke-submit-form-response').removeClass().addClass('error')
                       .html('<p>There was an <strong>' + errorThrown +
                           '</strong> error due to a <strong>' + textStatus +
                           '</strong> condition.</p>').fadeIn('fast');
-        },
-        complete: function(XMLHttpRequest, status)  {
-          $('form')[0].reset();
         }
       });
     };
