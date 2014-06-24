@@ -52,7 +52,7 @@
   answer: None! It's a hardware problem
 -
   id: 14
-  joke: 'A group of ten top software engineers is sent to a class for aspiring managers. The teacher walks in and asks this question:\n"You work for a software company which develops avionics (software that controls the instruments of an airplane). One day you are taking a business trip. As you get on the plane you see a plaque that says this plane is using a beta of the software your team developed. Who would get off?"\nNine developers raised their hands. The teacher looked at the tenth and asked, "Why would you stay on?"'
+  joke: 'A group of ten top software engineers is sent to a class for aspiring managers. The teacher walks in and asks this question:<br />"You work for a software company which develops avionics (software that controls the instruments of an airplane). One day you are taking a business trip. As you get on the plane you see a plaque that says this plane is using a beta of the software your team developed. Who would get off?"<br />Nine developers raised their hands. The teacher looked at the tenth and asked, "Why would you stay on?"'
   answer: 'The tenth said, "if my team wrote the software, the plane would not get off the ground, much less crash."'
 -
   id: 15
@@ -89,7 +89,7 @@
 -
   id: 23
   joke: 'What the programmer say when the weekend was coming?'
-  answer: '&91;"hip", "hip"&93;'
+  answer: '&#91;"hip", "hip"&#93;'
 -
   id: 24
   joke: Which rapper is the best programmer?
