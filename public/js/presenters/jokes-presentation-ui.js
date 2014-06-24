@@ -4,6 +4,10 @@
 
     var joke = {};
 
+    // ------------------------
+    // UI for displaying jokes
+    // ------------------------
+
     $(document).on("click", '#new-joke', function() {
       joke = bl.getRandJokeObject();
 
@@ -21,6 +25,23 @@
       // make sure to escape any code in your jokes and answers by using acsii characters in the yaml or db
       // since we are telling programming jokes it is a distinct possibility
       $('.jokes-answer-wrapper').html("<strong>Answer: </strong>" + joke['answer']);
+    });
+
+    // ------------------------
+    // UI for creating jokes
+    // ------------------------
+
+    $(document).on("click", "#add-new-joke-submit", function() {
+      var joke = $("#new-joke-input").val()
+        , answer = $("#new-joke-answer-input").val()
+        , newId = jokes.length + 1
+      ;
+      console.log("what is joke -> ", joke);
+      console.log("what is answer -> ", answer);
+      console.log("what is the new id -> ", newId);
+
+      // add it locally to jokes
+      bl.addJokeToLocalJokes(newId, joke, answer);
     });
 
 

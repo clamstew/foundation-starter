@@ -9,7 +9,7 @@ set :bind, '0.0.0.0' # Vagrant fix
 set :port, 9494
 
 get '/' do
-  # This goes in your <%= yield %> statement 
+  # This goes in your <%= yield %> statement
   # seen in your main layout.erb file
   @im_some_ruby_var = "Hey, this is a web app"
   erb :test # layout implied
@@ -31,4 +31,8 @@ get '/api/jokes' do
   jokesKlass = MyApp::Jokes.new
   @jokes = jokesKlass.jokes
   json @jokes
+end
+
+post '/api/jokes/create' do
+
 end
