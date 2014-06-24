@@ -1,12 +1,12 @@
-<button id="new-joke">Show a Random Joke</button>
-<button id="show-answer" style="display:none;">Show Answer</button>
-
-<div class="jokes-wrapper">
-  <h3>
-    <!-- jokes will go here -->
-  </h3>
-</div>
-
-<div class="jokes-answer-wrapper">
-  <!-- jokes will go here -->
+<ul class="tabs" data-tab>
+  <li class="tab-title active"><a href="#panel2-1">Tell Jokes</a></li>
+  <li class="tab-title"><a href="#panel2-2">Add Jokes</a></li>
+</ul>
+<div class="tabs-content">
+  <div class="content active" id="panel2-1">
+    <%= erb :_jokes_show %>
+  </div>
+  <div class="content" id="panel2-2">
+    <%= erb :_jokes_create %>
+  </div>
 </div>
