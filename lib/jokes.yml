@@ -98,3 +98,7 @@
   id: 25
   joke: 'The Programmer exclaimed, "I eat URLs for breakfast!" Someone a few cubicles over fired back, "How many?"'
   answer: 200 OK!
+-
+  id: 26
+  joke: "Why did the programmer's relationship not work out?"
+  answer: She had trouble committing
