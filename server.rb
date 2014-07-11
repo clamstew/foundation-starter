@@ -37,7 +37,8 @@ get '/api/jokes' do
   json @@jokes
 end
 
-post '/api/jokes/create' do
+post '/api/jokes' do
+  # puts params
   original_jokes_length = @@jokes.count
   if params[:joke]['joke'].empty? || params[:joke]['answer'].empty?
     response = {success: false, message: "you did fill things in"}
@@ -51,6 +52,18 @@ post '/api/jokes/create' do
   end
   json response
 end
+
+get '/api/jokes/:id' do |id|
+  json @@jokes[id.to_i - 1]
+end
+
+post '/api/jokes/:id' do |id|
+  joke = @@jokes[id.to_i - 1]
+  joke[:joke] = params[:joke]
+  joke[:answer] = params[:answer]
+  json joke
+end
+
 
 
 

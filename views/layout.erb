@@ -25,13 +25,16 @@
             </div>
         </div>
         <%= erb :_footer %>
+        <%= erb :_js_jokes_template %>
         <script type="text/javascript" src="/js/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="/js/vendor/foundation.min.js"></script>
         <script type="text/javascript" src="/js/vendor/foundation.init.js"></script>
         <script type="text/javascript" src="/js/vendor/underscore.js"></script>
+        <script type="text/javascript" src="/js/vendor/backbone.js"></script>
         <script type="text/javascript" src="/js/utils.js"></script>
-        <script type="text/javascript" src="/js/controllers/jokes-business-logic.js"></script>
-        <script type="text/javascript" src="/js/presenters/jokes-presentation-ui.js"></script>
+        <script type="text/javascript" src="/js/models/joke.js"></script>
+        <script type="text/javascript" src="/js/collections/jokes.js"></script>
+        <script type="text/javascript" src="/js/views/jokes-show.js"></script>
 
     </body>
 
